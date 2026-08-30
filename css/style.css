@@ -1,0 +1,575 @@
+/* =========================================
+   BUSINESS CLINICS SERVICES LTD
+   MAIN STYLESHEET
+========================================= */
+
+
+/* =========================================
+   ROOT VARIABLES
+========================================= */
+
+:root {
+    --navy: #110054;
+    --red: #E80022;
+    --white: #FFFFFF;
+    --text: #222A35;
+    --light-bg: #F7F7F9;
+    --border: #E6E6EB;
+
+    --heading-font: "Manrope", sans-serif;
+    --body-font: "Inter", sans-serif;
+}
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--navy);
+    font-weight: 800;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    min-height: 88px;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand strong {
+    font-family: var(--heading-font);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.navbar-brand span {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-left: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--red);
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    border-radius: 0;
+    padding: 0.8rem 1.5rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom {
+    background: var(--red);
+    color: var(--white);
+    border: 1px solid var(--red);
+}
+
+.btn-primary-custom:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+}
+
+.btn-outline-custom {
+    color: var(--navy);
+    border: 1px solid var(--navy);
+    background: transparent;
+}
+
+.btn-outline-custom:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.btn-light-custom {
+    background: var(--white);
+    color: var(--navy);
+    border: 1px solid var(--white);
+}
+
+.btn-light-custom:hover {
+    background: transparent;
+    color: var(--white);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.eyebrow {
+    color: var(--red);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-left: 42px;
+}
+
+.eyebrow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background: var(--red);
+}
+
+.hero-section h1 {
+    font-size: clamp(2.7rem, 5vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section h1 span {
+    color: var(--red);
+}
+
+.hero-description {
+    max-width: 620px;
+    font-size: 1.05rem;
+    color: #555C68;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image-placeholder {
+    min-height: 520px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(17, 0, 84, 0.95),
+            rgba(17, 0, 84, 0.65)
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-placeholder::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(255,255,255,0.25);
+    transform: rotate(45deg);
+}
+
+.hero-image-placeholder span {
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.intro-section {
+    padding: 110px 0;
+    background: var(--light-bg);
+}
+
+.intro-section h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+}
+
+.intro-text {
+    font-size: 1.25rem;
+    color: #444B56;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-section {
+    padding: 110px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 3rem;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    margin: 0;
+}
+
+.section-heading > p {
+    max-width: 430px;
+    color: #666;
+    margin: 0;
+}
+
+.service-card {
+    height: 100%;
+    padding: 35px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--red);
+    box-shadow: 0 15px 40px rgba(17, 0, 84, 0.08);
+}
+
+.service-number {
+    color: var(--red);
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.service-card h3 {
+    font-size: 1.35rem;
+    margin: 1.4rem 0 1rem;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.service-card a {
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.service-card a:hover {
+    color: var(--red);
+}
+
+
+/* =========================================
+   IMPACT
+========================================= */
+
+.impact-section {
+    padding: 110px 0;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.impact-section h2 {
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.impact-section p {
+    color: rgba(255,255,255,0.75);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.2);
+}
+
+.impact-item {
+    padding: 35px;
+    background: var(--navy);
+}
+
+.impact-item strong {
+    display: block;
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-size: 2.7rem;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+}
+
+.impact-item span {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.values-section {
+    padding: 110px 0;
+}
+
+.values-section h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+}
+
+.values-list {
+    border-top: 1px solid var(--border);
+}
+
+.values-list > div {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.values-list h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.values-list p {
+    margin: 0;
+    color: #666;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-section {
+    padding: 0 0 110px;
+}
+
+.cta-box {
+    background: var(--red);
+    padding: 80px;
+    text-align: center;
+}
+
+.cta-box .eyebrow {
+    color: var(--white);
+    display: inline-block;
+}
+
+.cta-box .eyebrow::before {
+    background: var(--white);
+}
+
+.cta-box h2 {
+    color: var(--white);
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 80px 0 25px;
+}
+
+.footer h3 {
+    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    color: rgba(255,255,255,0.65);
+}
+
+.footer h4 {
+    color: var(--white);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 0.6rem;
+}
+
+.footer a {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 60px;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 0.7rem 0 !important;
+    }
+
+    .hero-section {
+        padding: 70px 0;
+    }
+
+    .hero-image-placeholder {
+        min-height: 400px;
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .cta-box {
+        padding: 55px 30px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .hero-section h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-image-placeholder {
+        min-height: 320px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 28px;
+    }
+
+    .intro-section,
+    .services-section,
+    .impact-section,
+    .values-section {
+        padding: 75px 0;
+    }
+
+    .cta-section {
+        padding-bottom: 75px;
+    }
+
+}
