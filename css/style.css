@@ -1,6 +1,6 @@
 /* =========================================
    BUSINESS CLINICS SERVICES LTD
-   MAIN STYLESHEET
+   MAIN STYLESHEET DEVELOPED BY BRIGHT JOHN NELSON (JUNIOR DEVELOPER)
 ========================================= */
 
 
@@ -70,13 +70,15 @@ a {
     min-height: 88px;
     border-bottom: 1px solid var(--border);
 }
-
 .navbar-brand {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.05;
-    color: var(--navy);
-    letter-spacing: -0.5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 180px;
+    height: auto;
+    display: block;
 }
 
 .navbar-brand strong {
@@ -209,45 +211,15 @@ a {
     flex-wrap: wrap;
 }
 
-.hero-image-wrapper {
-    position: relative;
+.hero-image {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
 }
-
-.hero-image-placeholder {
-    min-height: 520px;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(17, 0, 84, 0.95),
-            rgba(17, 0, 84, 0.65)
-        );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-image-placeholder::after {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border: 2px solid rgba(255,255,255,0.25);
-    transform: rotate(45deg);
-}
-
-.hero-image-placeholder span {
-    color: var(--white);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    z-index: 1;
-}
-
 
 /* =========================================
-   INTRODUCTION
+   INTRODUCTION NELLY REMEMEMBER THIS COMES AFTER THE HERO IMAGE.
 ========================================= */
 
 .intro-section {
