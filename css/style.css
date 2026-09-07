@@ -480,7 +480,156 @@ a {
     font-size: 0.75rem;
     margin: 0;
 }
+/* =========================================
+   PREMIUM HERO ANIMATIONS
+   ========================================= */
 
+/* Hero text entrance */
+.hero-text {
+    animation: heroTextReveal 0.9s ease-out both;
+}
+
+/* Small corporate label */
+.hero-label {
+    animation: heroLabelReveal 0.7s ease-out both;
+}
+
+/* Headline */
+.hero-text h1 {
+    animation: heroHeadingReveal 0.9s ease-out 0.15s both;
+}
+
+/* Description */
+.hero-text p {
+    animation: heroParagraphReveal 0.9s ease-out 0.3s both;
+}
+
+/* Buttons */
+.hero-buttons {
+    animation: heroButtonsReveal 0.9s ease-out 0.45s both;
+}
+
+
+/* -----------------------------------------
+   HERO IMAGE
+   ----------------------------------------- */
+
+.hero-visual {
+    animation: heroImageReveal 1.1s ease-out 0.15s both;
+}
+
+.hero-image-wrapper {
+    overflow: hidden;
+}
+
+/* Very subtle cinematic movement */
+.hero-image {
+    animation: heroImageZoom 14s ease-out 0.8s both;
+}
+
+
+/* -----------------------------------------
+   CORPORATE RED ACCENT
+   ----------------------------------------- */
+
+.hero-label::after {
+    content: "";
+    display: block;
+
+    width: 42px;
+    height: 3px;
+
+    margin-top: 10px;
+
+    background: #e80022;
+}
+
+
+/* -----------------------------------------
+   KEYFRAMES
+   ----------------------------------------- */
+
+@keyframes heroTextReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroLabelReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroHeadingReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroParagraphReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroButtonsReveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroImageReveal {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroImageZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.045);
+    }
+}
 
 /* =========================================
    RESPONSIVE
@@ -546,4 +695,23 @@ a {
         padding-bottom: 75px;
     }
 
+}
+/* Subtle BCSL brand treatment on hero image */
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(17, 0, 84, 0.10),
+        rgba(17, 0, 84, 0) 55%
+    );
+
+    pointer-events: none;
 }
