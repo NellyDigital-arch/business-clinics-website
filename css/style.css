@@ -1096,7 +1096,200 @@ a {
     .hero-image {
         animation: none !important;
     }
+/* =========================================================
+   BCSL MOBILE HERO — IMAGE BACKGROUND / TEXT ON TOP
+   ========================================================= */
 
+@media (max-width: 768px) {
+
+    /* Make the hero a single visual composition */
+    .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 720px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Put the existing hero image behind everything */
+    .hero-visual {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        animation: none !important;
+    }
+
+    .hero-image-wrapper {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transform: none !important;
+        border-radius: 0 !important;
+    }
+
+    /* Make the actual image fill the hero */
+    .hero-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center;
+        display: block;
+        animation: none !important;
+    }
+
+    /* Dark corporate overlay */
+    .hero-image-wrapper::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(17, 0, 84, 0.92) 0%,
+                rgba(17, 0, 84, 0.78) 45%,
+                rgba(17, 0, 84, 0.55) 100%
+            );
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* Keep the text above the image */
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .hero-text {
+        position: relative;
+        z-index: 3;
+        color: #ffffff;
+        animation: bcslMobileTextIn 0.75s ease-out both;
+    }
+
+    /* Small label */
+    .hero-label {
+        color: #ffffff !important;
+    }
+
+    /* Main heading */
+    .hero-text h1 {
+        color: #ffffff !important;
+        animation: bcslMobileHeadingIn 0.8s
+            cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+    }
+
+    /* Keep any red emphasis in the heading */
+    .hero-text h1 span {
+        color: #e80022;
+    }
+
+    /* Paragraph */
+    .hero-text p {
+        color: rgba(255, 255, 255, 0.90) !important;
+        animation: bcslMobileParagraphIn 0.7s ease-out 0.18s both;
+    }
+
+    /* Buttons stay above the image */
+    .hero-buttons {
+        position: relative;
+        z-index: 3;
+        animation: bcslMobileButtonsIn 0.65s ease-out 0.28s both;
+    }
+
+    /* Hide the old decorative circles on mobile */
+    .hero::before,
+    .hero::after {
+        display: none !important;
+    }
+
+    /* Mobile text entrance */
+    @keyframes bcslMobileTextIn {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bcslMobileHeadingIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bcslMobileParagraphIn {
+        from {
+            opacity: 0;
+            transform: translateY(18px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bcslMobileButtonsIn {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+/* Smaller phones */
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 680px;
+    }
+
+    .hero-content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero-image {
+        object-position: center center;
+    }
+
+}
+
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-text,
+    .hero-text h1,
+    .hero-text p,
+    .hero-buttons {
+        animation: none !important;
+    }
+
+}
     .hero-image-wrapper {
         transition: none;
     }
