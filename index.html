@@ -24,59 +24,197 @@
 <!-- =========================
      HEADER / NAVIGATION
 ========================== -->
- <header>
-        <nav class="navbar navbar-expand-lg bg-white">
-            <div class="container">
 
-               <a class="navbar-brand" href="index.html">
-    <img src="images/logo/bcsl-logo.png" alt="Business Clinics Services Ltd Logo">
-</a>
-                <button 
-                    class="navbar-toggler" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#mainNavigation"
-                    aria-controls="mainNavigation"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+     <header>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
 
-                <div class="collapse navbar-collapse" id="mainNavigation">
+            <!-- BCSL LOGO -->
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo/bcsl-logo.png"
+                     alt="Business Clinics Services Ltd Logo">
+            </a>
 
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
+            <!-- MOBILE TOGGLE -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
+            <!-- NAVIGATION -->
+            <div class="collapse navbar-collapse" id="mainNavigation">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li>
+                    <!-- HOME -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            Home
+                        </a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Insights</a>
-                        </li>
+                    <!-- ABOUT US -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            About Us
+                        </a>
 
-                        <li class="nav-item ms-lg-3">
-                            <a class="btn btn-primary-custom" href="#">Contact Us</a>
-                        </li>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Who We Are
+                                </a>
+                            </li>
 
-                    </ul>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Our Experience
+                                </a>
+                            </li>
 
-                </div>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Our Team
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Our Impact
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- SERVICES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Services
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Business Development Services
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Investment Promotion
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Enterprise Management
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Digitization & Green Economy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Empowerment & Community Development
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- PROJECTS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Projects
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Project Stories
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Featured Projects
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Our Impact
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- INSIGHTS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Insights
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Articles
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    News & Updates
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Resources
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- CONTACT -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary-custom" href="#">
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
-        </nav>
-    </header>
-
+        </div>
+    </nav>
+</header>
 
     <!-- =========================
          HERO SECTION
