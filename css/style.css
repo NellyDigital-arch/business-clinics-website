@@ -84,20 +84,6 @@ body {
 /* =========================================
    MOBILE NAVIGATION
 ========================================= */
-Then add this CSS:
-
-/* Hamburger → X */
-
-.navbar-toggler.menu-open .menu-icon span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-}
-
-.navbar-toggler.menu-open .menu-icon span:nth-child(2) {
-    opacity: 0;
-}
-
-.navbar-toggler.menu-open .menu-icon span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
 
 @media (max-width: 991.98px) {
 
@@ -306,21 +292,6 @@ Then add this CSS:
         margin: 0.8rem 0 0.5rem;
     }
 }
-
-   /* Hamburger → X */
-
-.navbar-toggler.menu-open .menu-icon span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-}
-
-.navbar-toggler.menu-open .menu-icon span:nth-child(2) {
-    opacity: 0;
-}
-
-.navbar-toggler.menu-open .menu-icon span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-}
-   
 /* =========================================
    HERO
 ========================================= */
@@ -1457,4 +1428,3 @@ Then add this CSS:
         transition: none;
     }
 }
-
