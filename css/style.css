@@ -68,8 +68,12 @@ a {
 
 .navbar {
     min-height: 88px;
+    background: var(--white) !important;
     border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 1000;
 }
+
 .navbar-brand {
     display: inline-flex;
     align-items: center;
@@ -81,36 +85,189 @@ a {
     display: block;
 }
 
-.navbar-brand strong {
-    font-family: var(--heading-font);
-    font-size: 1.05rem;
-    font-weight: 800;
-}
 
-.navbar-brand span {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+/* =========================================
+   MAIN NAV LINKS
+========================================= */
+
+.navbar-nav {
+    gap: 0.15rem;
 }
 
 .nav-link {
-    color: var(--navy);
+    position: relative;
+
+    color: var(--navy) !important;
+
     font-weight: 600;
     font-size: 0.9rem;
-    margin-left: 1.2rem;
-    transition: 0.3s ease;
+
+    padding: 0.8rem 0.9rem !important;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Red hover indicator */
+
+.nav-link::after {
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--red);
+    color: var(--red) !important;
 }
+
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.dropdown-menu {
+    min-width: 245px;
+
+    margin-top: 0.6rem !important;
+
+    padding: 0.7rem 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 0;
+
+    background: var(--white);
+
+    box-shadow:
+        0 15px 40px rgba(17, 0, 84, 0.12);
+
+    animation: dropdownFade 0.2s ease-out;
+}
+
+
+/* Dropdown items */
+
+.dropdown-item {
+    position: relative;
+
+    padding: 0.75rem 1.25rem;
+
+    color: var(--text);
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        padding 0.25s ease;
+}
+
+
+/* Hover */
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--red);
+
+    background: rgba(232, 0, 34, 0.04);
+
+    padding-left: 1.45rem;
+}
+
+
+/* Small red indicator */
+
+.dropdown-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    width: 3px;
+
+    height: 0;
+
+    background: var(--red);
+
+    transform: translateY(-50%);
+
+    transition: height 0.25s ease;
+}
+
+.dropdown-item:hover::before {
+    height: 60%;
+}
+
+
+/* =========================================
+   DROPDOWN ARROW
+========================================= */
+
+.dropdown-toggle::after {
+    margin-left: 0.45rem;
+
+    vertical-align: 0.15em;
+
+    border-top: 0.35em solid currentColor;
+
+    border-right: 0.35em solid transparent;
+
+    border-left: 0.35em solid transparent;
+
+    border-bottom: 0;
+}
+
+
+/* =========================================
+   DROPDOWN ANIMATION
+========================================= */
+
+@keyframes dropdownFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.navbar .btn-primary-custom {
+    margin-left: 0.5rem;
+
+    padding: 0.7rem 1.3rem;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
 
 .navbar-toggler {
     border: none;
+
+    padding: 0.4rem;
+
     box-shadow: none !important;
 }
 
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
 
 /* =========================================
    BUTTONS
@@ -1293,4 +1450,74 @@ a {
     .hero-image-wrapper {
         transition: none;
     }
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        min-height: 78px;
+    }
+
+    .navbar-brand img {
+        width: 155px;
+    }
+
+    .navbar-collapse {
+        padding: 1rem 0 1.5rem;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 0.8rem 0 !important;
+        margin-left: 0 !important;
+    }
+
+    /* Mobile dropdown */
+
+    .dropdown-menu {
+        margin-top: 0 !important;
+
+        padding: 0.3rem 0;
+
+        border: none;
+
+        box-shadow: none;
+
+        background: var(--light-bg);
+
+        animation: none;
+    }
+
+    .dropdown-item {
+        padding: 0.7rem 1rem;
+
+        font-size: 0.85rem;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        padding-left: 1.25rem;
+    }
+
+    .dropdown-item::before {
+        display: none;
+    }
+
+    /* Contact button */
+
+    .navbar .btn-primary-custom {
+        display: inline-block;
+
+        margin: 0.8rem 0 0;
+
+        width: fit-content;
+    }
+
 }
