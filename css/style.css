@@ -144,7 +144,44 @@ body {
 /* Rotate chevron upward when dropdown is open */
 .navbar .dropdown.show > .dropdown-toggle::after {
     transform: rotate(-135deg);
+   /* =========================================
+   MOBILE DROPDOWN SECTIONS
+========================================= */
+
+.navbar .dropdown-menu {
+    display: none;
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding: 0.3rem 0 0.6rem 1rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
 }
+
+/* Show submenu when opened */
+.navbar .dropdown.show > .dropdown-menu {
+    display: block;
+}
+
+/* Submenu items */
+.navbar .dropdown-item {
+    padding: 0.7rem 0.8rem;
+    color: var(--navy);
+    font-size: 0.88rem;
+    border-left: 2px solid rgba(232, 0, 34, 0.25);
+}
+
+/* Submenu hover/tap */
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background: rgba(232, 0, 34, 0.05);
+    color: var(--red);
+    border-left-color: var(--red);
+}
+}
+
+
 /* =========================================
    BUTTONS
 ========================================= */
