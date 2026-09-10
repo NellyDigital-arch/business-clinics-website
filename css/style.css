@@ -103,6 +103,48 @@ body {
     .navbar-collapse {
         padding: 1.25rem 0 0.75rem;
     }
+   /* =========================================
+   MOBILE MENU — RIGHT SIDE DRAWER
+========================================= */
+
+.navbar-collapse {
+    position: fixed;
+    top: 76px;
+    right: 0;
+    width: 85%;
+    max-width: 380px;
+    height: calc(100vh - 76px);
+
+    background: var(--white);
+    padding: 1.5rem 1.5rem 2rem;
+
+    overflow-y: auto;
+    box-shadow: -12px 0 35px rgba(17, 0, 84, 0.12);
+
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 1029;
+}
+
+/* Menu opened */
+.navbar-collapse.show {
+    transform: translateX(0);
+}
+
+/* Prevent Bootstrap's collapsing animation from fighting
+   with our side-to-side drawer animation */
+.navbar-collapse.collapsing {
+    height: calc(100vh - 76px) !important;
+    display: block;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+}
+
+/* Keep the menu visible while Bootstrap is changing state */
+.navbar-collapse.collapsing.show {
+    transform: translateX(0);
+}
 }
 /* =========================================
    MOBILE DROPDOWN CHEVRONS
