@@ -69,7 +69,7 @@ a {
 ========================================= */
 
 .navbar {
-    min-height: 92px;
+    min-height: 70px;
     background: var(--white) !important;
     border-bottom: 1px solid var(--border);
     padding: 1rem 0;
@@ -113,7 +113,7 @@ body {
 /* Prevent Bootstrap's collapsing animation from fighting
    with our side-to-side drawer animation */
 .navbar-collapse.collapsing {
-    height: calc(100vh - 76px) !important;
+    height: calc(100vh - 68px) !important;
     display: block;
     overflow-y: auto;
     transform: translateX(100%);
